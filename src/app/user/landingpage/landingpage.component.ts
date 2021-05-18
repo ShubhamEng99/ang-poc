@@ -19,7 +19,6 @@ register=new FormGroup({
   Cpassword:new FormControl(''),
 
  })
-path=1;
 incorrect=false;
 public pathlen=1;
 public obj:any;
@@ -39,7 +38,6 @@ addformdata(){
   this.register.value.friends=[];
   this.register.value.requests=[];
   this.service.send.next(this.register.value);
-  this.path++;
   if(this.register.value.password==this.register.value.Cpassword){ 
   this.service.authuser(this.register.value).subscribe(data=>{
     this.incorrect=false;
