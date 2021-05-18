@@ -1,0 +1,51 @@
+{
+  "admin": {
+    "email": "admin@mail.com",
+    "password": "adminpass"
+  },
+  "users": [
+    {
+      "name": "shubham sharma",
+      "email": "shubham.eng1999@gmail.com",
+      "address": "Ghaziabad",
+      "id": 87,
+      "password": "password",
+      "Cpassword": "password",
+      "src": "assets/img1.jpg",
+      "block": false,
+      "friends": [
+        "vineet",
+        "sumit"
+      ],
+      "requests": []
+    },
+    {
+      "name": "vineet",
+      "email": "vineetarora010@gmail.com",
+      "address": "adasd",
+      "id": 2,
+      "password": "pass",
+      "Cpassword": "pass",
+      "src": "assets/img2.jpg",
+      "block": false,
+      "friends": [
+        "shubham sharma"
+      ],
+      "requests": []
+    },
+    {
+      "name": "sumit",
+      "email": "sumit@mail.com",
+      "address": "ajka",
+      "id": 212,
+      "password": "pass",
+      "Cpassword": "pass",
+      "src": "assets/img6.jpg",
+      "block": false,
+      "friends": [
+        "shubham sharma"
+      ],
+      "requests": []
+    }
+  ]
+}

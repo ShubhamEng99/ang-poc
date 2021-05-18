@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7XV40gUcR8Iov_443FkzCqsjRJpBFifQzEA&usqp=CAU"height="50px"width="50px"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      </div>
+    </div>
+  </nav>
+  <h1>Admin-Login</h1>
+  <div class="container">
+    <div id="login">
+      <br>
+      <br>
+      <input type="text" placeholder="email"[(ngModel)]="email"class="form-control">
+      <br>
+      <input type="password"placeholder="password"[(ngModel)]="password"class="form-control">
+      <br>
+      <button (click)="adminverification()" class="btn btn-primary">Login</button>
+    </div>
+  </div>
+

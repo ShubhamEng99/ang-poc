@@ -1,0 +1,21 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+.navbar-brand img{
+    border-radius: 50%;
+}
+.d-flex{
+    margin-left: 420px;
+}
+.card{
+    margin-top:15px;
+}
+.card ul{
+    list-style-type: none;
+}
+.card ul li{
+    font-size: large;
+    padding:10px;
+}
+#searched{
+    height:200px;
+  
+}

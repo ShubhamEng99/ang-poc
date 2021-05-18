@@ -1,0 +1,67 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7XV40gUcR8Iov_443FkzCqsjRJpBFifQzEA&usqp=CAU"height="50px"width="50px"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+     <div class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search for Friends" aria-label="Search"[(ngModel)]="searched">
+        <button (click)="getsearched()" class="btn btn-outline-success" type="submit">Search</button>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      </div>
+    </div>
+  </nav>
+<div class="container-fluid">  
+  <div class="row">
+    <div class="col">
+      <div class="card" style="width: 22rem;">
+        <img src="{{currentuser.src}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h2 class="card-title">{{currentuser.name}}</h2>
+          <hr>
+          <ul>
+            <li>Mail&nbsp;:&nbsp;{{currentuser.email}}</li>
+            <li>id&nbsp;:&nbsp;{{currentuser.id}}</li>
+            <li>Address&nbsp;:&nbsp;{{currentuser.address}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div *ngIf="issearched" class="card" style="width: 18rem;">
+        <img src="{{searcheduser.src}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <ul>
+            <li>Email:{{searcheduser.email}}</li>
+            <li>id:{{searcheduser.id}}</li>
+            <li><button (click)="add()" class="btn btn-outline-primary">Add</button>&nbsp;<button (click)="close()" class="btn btn-outline-danger">Close</button></li>
+            <span *ngIf="reqsent">Request sent</span>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col"id="details">
+      <div id="req">
+      <h2>Friend-requests</h2>
+      <hr>
+      <ul *ngFor="let item of reqlist,let i=index">
+        <li>{{item}}&nbsp;&nbsp;<button (click)="Acceptreq(i)" class="btn btn-success btn-sm">Accept</button><button (click)="reject(i)" class="btn btn-danger btn-sm">reject</button></li>
+      </ul>
+    </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div id="list">
+      <h2>Friends-List</h2>
+      <hr>
+      <ul *ngFor="let item of friendlist">
+        <li>{{item}}</li>
+      </ul>
+      </div>
+ 
+    </div>
+  </div>
+</div>
+  

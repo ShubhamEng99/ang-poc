@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7XV40gUcR8Iov_443FkzCqsjRJpBFifQzEA&usqp=CAU"height="50px"width="50px">
+        <br></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      </div>
+    </div>
+  </nav>
+  <h1 *ngIf="!userlen">The user count is 0 Right Now...</h1>
+  <div class="container">
+    <div *ngFor="let item of userdata,let i=index" class="card" style="width: 18rem;">
+        <img src="{{item.src}}"class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">{{item.name}}</h5>
+         <ul>
+             <li>Email:{{item.email}}</li>
+             <li>Address:{{item.address}}</li>
+         </ul>
+          <button (click)="block(i)" class="btn btn-danger">block</button>
+          <button (click)="Unblock(i)" class="btn btn-success">Unblock</button>
+        </div>
+      </div>
+  </div>
